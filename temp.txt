@@ -1,0 +1,16 @@
+--[[		
+	if IsAddOnLoaded("JWRepBar") and JWRepBarFrame:IsVisible() then
+		BFAInvasionTimer:ClearAllPoints()
+		BFAInvasionTimer:SetPoint("BOTTOM",JWRepBarFrame, "TOP",0,25) --anchor to rep frame
+	elseif IsAddOnLoaded("JWXPBar") and JWXPBarFrame:IsVisible() then
+		BFAInvasionTimer:ClearAllPoints()
+		BFAInvasionTimer:SetPoint("BOTTOM",JWXPBarFrame, "TOP",0,25) --anchor to xp frame
+	else
+		BFAInvasionTimer:ClearAllPoints()
+		BFAInvasionTimer:SetPoint("BOTTOMRIGHT","UIParent", "BOTTOMRIGHT",-25,25) --anchor to bottom of UI
+	end
+	if IsAddOnLoaded("Skada") and BFAInvasionTimer:IsVisible() then
+		SkadaBarWindowSkada:ClearAllPoints()
+		SkadaBarWindowSkada:SetPoint("BOTTOM",BFAInvasionTimer,"TOP",0,5) --anchor to BFAInvasionTimer
+	end
+--]]
